@@ -8,6 +8,7 @@
     overflow: hidden;
     position: fixed;
     background: #0b0b0b;
+    animation: open-bg 1s;
     opacity: 0.8; }
   
   .mfp-wrap {
@@ -45,6 +46,9 @@
     vertical-align: middle;
     margin: 0 auto;
     text-align: left;
+    animation: open 1.1s;
+    width: 90vw;
+    height: 90vh;;
     z-index: 1045; }
   
   .mfp-inline-holder .mfp-content,
@@ -222,7 +226,7 @@
     .mfp-iframe-holder .mfp-content {
       line-height: 0;
       width: 100%;
-      max-width: 900px; }
+      max-width: 90vw; }
     .mfp-iframe-holder .mfp-close {
       top: -40px; }
   
@@ -349,3 +353,31 @@
     .mfp-container {
       padding-left: 6px;
       padding-right: 6px; } }
+
+.project {
+  animation: open 2s;
+}
+
+.mfp-removing{
+  animation: close-bg 1s;
+}
+
+@keyframes open-bg {
+    0%   {opacity: 0;}
+    100% {opacity: 0.8;}
+}
+
+@keyframes close-bg {
+    0%   {opacity: 0.8;}
+    100% {opacity: 0;}
+}
+
+@keyframes open {
+  0%   {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes close {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
+}

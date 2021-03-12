@@ -14,15 +14,22 @@ $('.container, #title-text').mousemove(function(event){
 
 $(document).ready(function() {
     $('.test1').magnificPopup({
-        type: 'image'
+        type: 'image',
+        removalDelay: 900,
+        preloader: false,
+        callbacks: {
+            beforeOpen: function() {
+				this.st.mainClass = this.st.el.attr('data-effect');
+			}
+        },
         // other options
     });
     
     $('.test2').magnificPopup({
-        disableOn: 700,
         type: 'iframe',
-        removalDelay: 160,
-        prelaoder: false,
+        disableOn: 700,
+        removalDelay: 900,
+        preloader: false,
         fixedContentPos: false
     });
 });
