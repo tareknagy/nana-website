@@ -8,9 +8,62 @@
     --primary: blue;
 }
 
+@font-face {
+    font-family: 'Formula Condensed';
+    font-style: normal;
+    font-weight: normal;
+    src:    url("fonts/FormulaCondensed-Regular.otf") format("opentype"),
+            url("fonts/FormulaCondensed-Regular.woff") format("woff"),
+            url("fonts/FormulaCondensed-Regular.woff2") format("woff2"),
+            url("fonts/FormulaCondensed-Regular.ttf") format("truetype"),
+            url("fonts/FormulaCondensed-Regular.eot") format("embedded-opentype");
+}
+
+@font-face {
+    font-family: 'Formula Condensed';
+    font-weight: bold;
+    src:    url("fonts/FormulaCondensed-Bold.otf") format("opentype"),
+            url("fonts/FormulaCondensed-Bold.woff") format("woff"),
+            url("fonts/FormulaCondensed-Bold.woff2") format("woff2"),
+            url("fonts/FormulaCondensed-Bold.ttf") format("truetype"),
+            url("fonts/FormulaCondensed-Bold.eot") format("embedded-opentype");
+}
+
+@font-face {
+    font-family: 'Telegraf';
+    font-weight: bold;
+    src:    url("fonts/Telegraf-Bold.otf") format("opentype"),
+            url("fonts/Telegraf-Bold.woff") format("woff"),
+            url("fonts/Telegraf-Bold.woff2") format("woff2"),
+            url("fonts/Telegraf-Bold.ttf") format("truetype"),
+            url("fonts/Telegraf-Bold.eot") format("embedded-opentype");
+}
+
+@font-face {
+    font-family: 'Telegraf';
+    font-weight: bolder;
+    src:    url("fonts/Telegraf-UltraBold.otf") format("opentype"),
+            url("fonts/Telegraf-UltraBold.woff") format("woff"),
+            url("fonts/Telegraf-UltraBold.woff2") format("woff2"),
+            url("fonts/Telegraf-UltraBold.ttf") format("truetype"),
+            url("fonts/Telegraf-UltraBold.eot") format("embedded-opentype");
+}
+
+
+@font-face {
+    font-family: 'Telegraf';
+    font-weight: normal;
+    src:    url("fonts/Telegraf-Regular.otf") format("opentype"),
+            url("fonts/Telegraf-Regular.woff") format("woff"),
+            url("fonts/Telegraf-Regular.woff2") format("woff2"),
+            url("fonts/Telegraf-Regular.ttf") format("truetype"),
+            url("fonts/Telegraf-Regular.eot") format("embedded-opentype");
+}
+
 body {
     overflow: hidden;
     background-color: cornsilk;
+    font-family: 'Formula Condensed';
 }
 
 img {
