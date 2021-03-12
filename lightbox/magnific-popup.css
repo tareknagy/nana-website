@@ -16,7 +16,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 1043;
+    z-index: 555559;
     position: fixed;
     outline: none !important;
     -webkit-backface-visibility: hidden; }
@@ -47,9 +47,9 @@
     margin: 0 auto;
     text-align: left;
     animation: open 1.1s;
-    width: 90vw;
-    height: 90vh;;
-    z-index: 1045; }
+    /* width: 90vw;
+    height: 90vh; */
+    z-index: 555559; }
   
   .mfp-inline-holder .mfp-content,
   .mfp-ajax-holder .mfp-content {
