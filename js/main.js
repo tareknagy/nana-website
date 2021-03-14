@@ -12,7 +12,7 @@ $('.container, #title-text').mousemove(function(event){
     $('#P003').attr('style', `transform: translate3d(${(window.innerWidth - 570) - ((window.innerWidth - event.pageX) / 2.5)}px, ${(window.innerHeight - 80) - ((window.innerHeight - event.pageY) / 2.5)}px, 0px)`);
     $('#P004').attr('style', `transform: translate3d(${(window.innerWidth - 590) - ((window.innerWidth - event.pageX) / 3.5)}px, ${(window.innerHeight - 20) - ((window.innerHeight - event.pageY) / 3)}px, 0px)`); // clean for bottom right edge
     $('#P005').attr('style', `transform: translate3d(${(window.innerWidth - 750) - ((window.innerWidth - event.pageX) / 2.5)}px, ${event.pageY / 4 + 90}px, 0px)`);
-    $('#P006').attr('style', `transform: translate3d(${event.pageX / 3.5 - 750 }px, ${(window.innerHeight - 20) - ((window.innerHeight - event.pageY) / 2.2`)}px, 0px)`); // clean for bottom right edge
+    $('#P006').attr('style', `transform: translate3d(${event.pageX / 3.5 - 750 }px, ${(window.innerHeight - 20) - ((window.innerHeight - event.pageY) / 2.2)}px, 0px)`); // clean for bottom right edge
 });
 
 
