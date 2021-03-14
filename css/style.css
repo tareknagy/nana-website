@@ -8,6 +8,12 @@
     --primary: blue;
 }
 
+a {
+    color: black;
+    text-decoration: none;
+    text-transform: none;
+}
+
 @font-face {
     font-family: 'Formula Condensed';
     font-style: normal;
@@ -89,6 +95,11 @@ img {
     font-size: 7vw;
 }
 
+#title-text:hover {
+    color: red;
+    
+}
+
 #content {
     display: flex;
     position: absolute;
@@ -109,27 +120,17 @@ img {
 }
 
 .project {
-    transition: transform 200ms, opacity 300ms;;
+    display: block;
+    transition: transform 200ms, opacity 300ms;
     /* transition-duration: 500ms; */
     transition-timing-function: ease;
     opacity: 0.8;
+    width: 150px;
+    height: 100px;
+    transform: translate3d(5vh, 50vw, 0px); /* depending on how many projects are displayed, change this */
 }
 
 .project:hover {
     z-index: 555555;
     opacity: 1;
-}
-
-#P001 {
-    display: block;
-    transform: translate3d(50px, 50px, 0px);
-    width: 150px;
-    height: 100px;
-}
-
-#P002 {
-    display: block;
-    transform: translate3d(-50px, 180px, 0px);
-    width: 150px;
-    height: 100px;
 }
