@@ -133,3 +133,13 @@ img {
     z-index: 555555;
     opacity: 1;
 }
+
+#about-box {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    height: 85vh;
+    background-color: cornsilk;
+}

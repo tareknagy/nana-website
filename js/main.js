@@ -46,11 +46,10 @@ $(document).ready(function() {
         fixedContentPos: false
     });
 
-    $('.about').magnificPopup({
-        type: 'iframe', // need to chage type
+    $('.about-link').magnificPopup({
+        type:'inline',
+        midClick: true,
         disableOn: 700,
-        removalDelay: 900,
-        preloader: false,
-        fixedContentPos: false
-    });
+        removalDelay: 900
+      });
 });
