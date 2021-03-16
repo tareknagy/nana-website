@@ -52,4 +52,10 @@ $(document).ready(function() {
         disableOn: 700,
         removalDelay: 900
       });
+
+    $('.contact-link').magnificPopup({
+    type:'inline',
+    midClick: true,
+    removalDelay: 900
+    });
 });
