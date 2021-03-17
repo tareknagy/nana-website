@@ -5,15 +5,10 @@ function moveMouse (x, y, i) {
     if (moveRandom === true) {
         // set round intervals
         const simulatedMouse = [[20, 50], [50, 70], [80, 50], [50, 30]];
-        // const simulatedMouse = [
-        //     [50.1811, 53.2631], [50.1811, 54.5263], [48.3695, 55.2631],
-        //     [47.4637, 55.2631], [46.9202, 54.2105], [47.4637, 52.1052],
-        //     [48.7318, 51.6842], [49.8188, 51.7894]
-        // ];
         // function 
         setTimeout(function() {
-            var mouseVh = simulatedMouse[simulatedPosition][0];
             var mouseVw = simulatedMouse[simulatedPosition][1];
+            var mouseVh = simulatedMouse[simulatedPosition][0];
             // move thumbnails
             $('#P001').attr('style', `transform: translate3d(${mouseVw / 2}vw, ${mouseVh / 2}vh, 0px); transition: transform 2000ms`); // top left
             $('#P002').attr('style', `transform: translate3d(${mouseVw / 2.5 + 5}vw, ${mouseVh / 2.5 - 2}vh, 0px); transition: transform 2000ms`); // top left
@@ -27,7 +22,7 @@ function moveMouse (x, y, i) {
             } else {
                 simulatedPosition++;
             };
-            // rerun function with new values
+            // re-run function with new values
             moveMouse(mouseVh, mouseVw, simulatedPosition);
         }, 1900);
     }
@@ -38,10 +33,10 @@ $(document).mousemove(function(event){
     moveRandom = false; 
 
     // get frame center
-    var frameHeight = window.innerHeight;
     var frameWidth = window.innerWidth;
-    var mouseVh = event.pageY / frameHeight * 100;
+    var frameHeight = window.innerHeight;
     var mouseVw = event.pageX / frameWidth * 100;
+    var mouseVh = event.pageY / frameHeight * 100;
 
     // // move container -- UPDATE DIV SIZE TO TURN ON / OFF 
     // let mW = ((((event.pageX)*100)/frameWidth).toFixed(3))-50;
@@ -57,26 +52,24 @@ $(document).mousemove(function(event){
     // $('#P006').attr('style', `transform: translate3d(${mouseVw / 4 - 80}%, ${((100 + mouseVh) / 1.5 - 45)}%, 0px)`); // bottom left
 
     // move thumbnails
-    $('#P001').attr('style', `transform: translate3d(${mouseVw / 2}vw, ${mouseVh / 2}vh, 0px)`); // top left
-    $('#P002').attr('style', `transform: translate3d(${mouseVw / 2.5 + 5}vw, ${mouseVh / 2.5 - 2}vh, 0px)`); // top left
-    $('#P003').attr('style', `transform: translate3d(${((100 + mouseVw) / 3 - 17)}vw, ${((100 + mouseVh) / 2 - 19)}vh, 0px)`); // bottom right corner
-    $('#P004').attr('style', `transform: translate3d(${((100 + mouseVw) / 4 - 35)}vw, ${((100 + mouseVh) / 3 + 5)}vh, 0px)`); // bottom right
-    $('#P005').attr('style', `transform: translate3d(${(((100 + mouseVw) / 2) - 80)}vw, ${mouseVh / 3 }vh, 0px)`); // top right
+    $('#P001').attr('style', `transform: translate3d(${mouseVw * .2}vw, ${mouseVh * .2}vh, 0px)`); // top left
+    $('#P002').attr('style', `transform: translate3d(${mouseVw * .3 + 15}vw, ${mouseVh * .3 + 5}vh, 0px)`); // top left
+    $('#P003').attr('style', `transform: translate3d(${mouseVw * .35 + 25}vw, ${mouseVh * .45 - 3}vh, 0px)`); // bottom right corner
+    $('#P004').attr('style', `transform: translate3d(${mouseVw * .3 + 45}vw, ${mouseVh * .2 + 4}vh, 0px)`); // bottom right
+    $('#P005').attr('style', `transform: translate3d(${mouseVw * .2 + 60}vw, ${mouseVh *.42 - 1}vh, 0px)`); // top right
     $('#P006').attr('style', `transform: translate3d(${mouseVw / 4 - 80}vw, ${((100 + mouseVh) / 1.5 - 45)}vh, 0px)`); // bottom left
+    $('#P007').attr('style', `transform: translate3d(${mouseVw / 2}vw, ${mouseVh / 2}vh, 0px)`); // top left
+    $('#P008').attr('style', `transform: translate3d(${mouseVw / 2.5 + 5}vw, ${mouseVh / 2.5 - 2}vh, 0px)`); // top left
+    $('#P009').attr('style', `transform: translate3d(${((100 + mouseVw) / 3 - 17)}vw, ${((100 + mouseVh) / 2 - 19)}vh, 0px)`); // bottom right corner
+    $('#P010').attr('style', `transform: translate3d(${((100 + mouseVw) / 4 - 35)}vw, ${((100 + mouseVh) / 3 + 5)}vh, 0px)`); // bottom right
+    $('#P011').attr('style', `transform: translate3d(${(((100 + mouseVw) / 2) - 80)}vw, ${mouseVh / 3 }vh, 0px)`); // top right
+    $('#P012').attr('style', `transform: translate3d(${mouseVw / 4 - 80}vw, ${((100 + mouseVh) / 1.5 - 45)}vh, 0px)`); // bottom left
 });
 
 $(document).mouseleave(function() {
-    
     // start random movement
     moveRandom = true;
-    // change transition speed
-    // $('.project').css('transition', 'transform 1000ms, opacity 300ms;');
-    $('#nav-box').attr('style', 'transition: transform 1000ms');
     moveMouse();
-
-
-
-
 });
 
 $(document).ready(function() {

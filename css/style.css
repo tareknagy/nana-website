@@ -119,14 +119,13 @@ img {
 }
 
 .project {
-    display: block;
-    position: relative;
+    /* display: inline-block; */
+    position: absolute;
     transition: transform 200ms, opacity 300ms;
     transition-timing-function: ease;
     opacity: 0.8;
-    width: 35vw;
-    height: 12vw;
-    /* height: 100px; */
+    width: 20vw;
+    height: 14vw;
     transform: translate3d(-50%, -80%, 0px); /* depending on how many projects are displayed, change this */
 }
 
