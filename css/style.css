@@ -104,8 +104,8 @@ img {
     position: absolute;
     justify-content: center;
     align-items: center;
-    height: 120vh;
-    width: 120vw;;
+    height: 100vh;
+    width: 100vw;
 }
 
 .container {
@@ -114,6 +114,8 @@ img {
     transition: transform 200ms;
     /* height: 200vh;
     width: 120vw; */
+    height: 100vh;
+    width: 100vw;
 }
 
 .project {
@@ -123,7 +125,7 @@ img {
     transition-timing-function: ease;
     opacity: 0.8;
     width: 35vw;
-    height: 25vh;
+    height: 12vw;
     /* height: 100px; */
     transform: translate3d(-50%, -80%, 0px); /* depending on how many projects are displayed, change this */
 }
@@ -145,7 +147,8 @@ img {
 }
 
 .project > a {
-    background-color: dimgray;
+    background-color:rgb(250, 247, 232);
+    font-size: 3vw;
     opacity: 0;
 }
 
