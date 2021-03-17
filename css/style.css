@@ -67,7 +67,7 @@ a {
 
 body {
     overflow: hidden;
-    background-color: cornsilk;
+    background-color: rgb(250, 247, 232);
     font-family: 'Formula Condensed';
 }
 
@@ -92,6 +92,7 @@ img {
     grid-column: 1 / 4;
     z-index: 555556;
     font-size: 7vw;
+    transition: 300ms;
 }
 
 #title-text:hover {
@@ -103,28 +104,26 @@ img {
     position: absolute;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;;
+    height: 120vh;
+    width: 120vw;;
 }
 
 .container {
     display: flex;
     padding: 5px;
-    /* justify-content: center;
-    align-items: center; */
-    /* background-color: blueviolet; */
-    height: 100vh;
-    width: 100vw;
+    transition: transform 200ms;
+    /* height: 200vh;
+    width: 120vw; */
 }
 
 .project {
     display: block;
+    position: relative;
     transition: transform 200ms, opacity 300ms;
-    /* transition-duration: 500ms; */
     transition-timing-function: ease;
     opacity: 0.8;
     width: 35vw;
-    max-height: 30vh;
+    height: 25vh;
     /* height: 100px; */
     transform: translate3d(-50%, -80%, 0px); /* depending on how many projects are displayed, change this */
 }
@@ -134,14 +133,34 @@ img {
     opacity: 1;
 }
 
-#popup-box-about {
+.project > * {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: transform 200ms, opacity 300ms;
+    transition-timing-function: ease;
+}
+
+.project > a {
+    background-color: dimgray;
+    opacity: 0;
+}
+
+.project > a:hover {
+    opacity: 0.8;
+}
+
+#popup-box-about { /* should be a class with "contact" below*/
     display: flex;
     margin: auto;
     justify-content: space-around;
     align-items: center;
     width: 90vw;
     height: 85vh;
-    background-color: cornsilk;
+    background-color: rgb(250, 247, 232);
 }
 
 #popup-box-contact {
@@ -151,7 +170,7 @@ img {
     align-items: center;
     width: 90vw;
     height: 85vh;
-    background-color: cornsilk;
+    background-color: rgb(250, 247, 232);
 }
 
 #popup-about {
@@ -194,4 +213,14 @@ img {
     margin: 0px 10px 10px 10px;
     text-align: center;
     font-size: 2vh;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-between;
+    width: 10vw;
+}
+
+.icons > a {
+    width: min(2vw, 20px);
 }
