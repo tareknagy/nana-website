@@ -124,8 +124,8 @@ img {
     transition: transform 200ms, opacity 300ms;
     transition-timing-function: ease;
     opacity: 0.8;
-    width: 20vw;
-    height: 14vw;
+    width: 18vw;
+    height: 22vh;
     transform: translate3d(-50%, -80%, 0px); /* depending on how many projects are displayed, change this */
 }
 
@@ -153,6 +153,7 @@ img {
 
 .project > a:hover {
     opacity: 0.8;
+    transform: scale(1.1);
 }
 
 #popup-box-about { /* should be a class with "contact" below*/
